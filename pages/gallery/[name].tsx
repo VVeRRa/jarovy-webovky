@@ -4,8 +4,7 @@ import fs from "fs";
 import { promisify } from "util";
 import Gallery from "react-grid-gallery";
 
-import styles from "../../styles/Home.module.scss";
-import Loader from "../../components/loader/Loader";
+import styles from "../../styles/GalleryDetails.module.scss";
 import { base64Img } from "../../public/gallery/base64Img";
 
 const t = {
@@ -22,17 +21,15 @@ const t = {
   larchTerrace: "Modřínová terasa",
   porchWithFollowupCasing: "Přístřešek pro rodinný dům a následný obklad",
   customMotoricCube: "Zakázka motorická kostka",
-  customRailings:"Zakázka zábradlí",
-  customBuiltInCabinetForTv:"Zakázka vestavěná skříň na Tv",
-  customChangingTable:"Zakázka přebalovací pult",
-  customBed:"Zakázka postel",
-  customChildrenKitchenette:"Zakázka dětská kuchyňka",
-  customChildrenSwing:"Zakázka dětská houpačka",
-  customBeechTreadsForBalconyDoors:"Zakázka bukové nášlapy k balkónovým dveřím",
-  motoricCube:"Motorická kostka"
-
-
-
+  customRailings: "Zakázka zábradlí",
+  customBuiltInCabinetForTv: "Zakázka vestavěná skříň na Tv",
+  customChangingTable: "Zakázka přebalovací pult",
+  customBed: "Zakázka postel",
+  customChildrenKitchenette: "Zakázka dětská kuchyňka",
+  customChildrenSwing: "Zakázka dětská houpačka",
+  customBeechTreadsForBalconyDoors:
+    "Zakázka bukové nášlapy k balkónovým dveřím",
+  motoricCube: "Motorická kostka",
 };
 
 const Name = ({ photos }) => {
@@ -43,7 +40,7 @@ const Name = ({ photos }) => {
     src: `./${name}/${photo}`,
     thumbnail: `./${name}/${photo}`,
     thumbnailWidth: "auto",
-    thumbnailHeight: "auto",
+    thumbnailHeight: "230px",
     isSelected: false,
     caption: "",
     nano: base64Img,
@@ -51,45 +48,36 @@ const Name = ({ photos }) => {
 
   return (
     <>
-      {!router ? (
-        <Loader />
-      ) : (
-        <div className={styles.container1}>
-          <h1 className={styles.title}>Jardovo Truhlářství</h1>
-          <h3>{t[name as string]}</h3>
-          <div
-            style={{
-              display: "block",
-              minHeight: "1px",
-              width: "100%",
-              overflow: "auto",
+      <div className={styles.container1}>
+        <h1 className={styles.title}>Jardovo Truhlářství</h1>
+        <h2>{t[name as string]}</h2>
+        <div className={styles.container}>
+          <Gallery
+            images={IMAGES}
+            showLightboxThumbnails={true}
+            hoverColor={"rgba(0,0,0,0.54)"}
+            parentHover={true}
+            enableImageSelection={true}
+            isSelected={false}
+            margin={8}
+            backdropClosesModal={true}
+            rowHeight="230px"
+            theme={{
+              container: {
+                background: "rgba(0, 0, 0, 0.8)",
+                backgroundColor: "rgba(0, 0, 0, 0.8)",
+              },
+              photos: {
+                border: "0.3rem solid white",
+              },
+              figure: {
+                border: "0.3rem solid white",
+              },
+              lightBoxProps: {},
             }}
-            className={styles.container}
-          >
-            <Gallery
-              images={IMAGES}
-              showLightboxThumbnails={true}
-              hoverColor={"rgba(0,0,0,0.54)"}
-              parentHover={true}
-              enableImageSelection={true}
-              isSelected={false}
-              margin={8}
-              backdropClosesModal={true}
-              theme={{
-                container: {
-                  background: "rgba(0, 0, 0, 0.8)",
-                  backgroundColor: "rgba(0, 0, 0, 0.8)",
-                },
-              }}
-            />
-            <style jsx>{`
-              .ReactGridGallery_tile {
-                border: 1rem solid #fff;
-              }
-            `}</style>
-          </div>
+          />
         </div>
-      )}
+      </div>
     </>
   );
 };
