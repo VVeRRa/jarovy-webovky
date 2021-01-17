@@ -6,6 +6,7 @@ import Gallery from "react-grid-gallery";
 
 import styles from "../../styles/Home.module.scss";
 import Loader from "../../components/loader/Loader";
+import { base64Img } from "../../public/gallery/base64Img";
 
 const t = {
   oakSelfBearingStairs: "Dubové samonosné schody",
@@ -13,7 +14,7 @@ const t = {
   customChildrenChangingRoom: "Zakázka detská šatnička",
   customWoodenGardenHouse: "Zakázka zahradní dřevěný domeček",
   customChildrenShelf: "Zakázka detská polička",
-  customSpruceBed: "Zakázka postel masiv smrk",
+  customSpruceBed: "customBed masiv smrk",
   customTableAndChairs: "akázka stolek a židle",
   gardenHouseWithRhombusCasing: "Zahradní domek a obklad rhombus",
   larchFence: "Modřínový plot",
@@ -21,6 +22,17 @@ const t = {
   larchTerrace: "Modřínová terasa",
   porchWithFollowupCasing: "Přístřešek pro rodinný dům a následný obklad",
   customMotoricCube: "Zakázka motorická kostka",
+  customRailings:"Zakázka zábradlí",
+  customBuiltInCabinetForTv:"Zakázka vestavěná skříň na Tv",
+  customChangingTable:"Zakázka přebalovací pult",
+  customBed:"Zakázka postel",
+  customChildrenKitchenette:"Zakázka dětská kuchyňka",
+  customChildrenSwing:"Zakázka dětská houpačka",
+  customBeechTreadsForBalconyDoors:"Zakázka bukové nášlapy k balkónovým dveřím",
+  motoricCube:"Motorická kostka"
+
+
+
 };
 
 const Name = ({ photos }) => {
@@ -34,6 +46,7 @@ const Name = ({ photos }) => {
     thumbnailHeight: "auto",
     isSelected: false,
     caption: "",
+    nano: base64Img,
   }));
 
   return (
@@ -56,7 +69,8 @@ const Name = ({ photos }) => {
             <Gallery
               images={IMAGES}
               showLightboxThumbnails={true}
-              hoverColor={"rgba(0,0,0,0.54)"}              parentHover={true}
+              hoverColor={"rgba(0,0,0,0.54)"}
+              parentHover={true}
               enableImageSelection={true}
               isSelected={false}
               margin={8}
@@ -106,6 +120,14 @@ export async function getStaticPaths() {
       { params: { name: "customChildrenChangingRoom" } },
       { params: { name: "oakSelfBearingStairs" } },
       { params: { name: "customChildrenBed" } },
+      { params: { name: "motoricCube" } },
+      { params: { name: "customBeechTreadsForBalconyDoors" } },
+      { params: { name: "customChildrenSwing" } },
+      { params: { name: "customChildrenKitchenette" } },
+      { params: { name: "customBed" } },
+      { params: { name: "customChangingTable" } },
+      { params: { name: "customBuiltInCabinetForTv" } },
+      { params: { name: "customRailings" } },
     ],
 
     fallback: false,

@@ -126,6 +126,78 @@ const GalleryOfPictures = ({  }) => {
             <p>Přístřešek pro rodinný dům a následný obklad</p>
           </a>
         </Link>
+        <Link href={"gallery/motoricCube"}>
+          <a className={` ${styles.galleryItem} ${styles.galleryItem15}`}>
+            <img className={styles.galleryImg}
+                 src={"/gallery/motoricCube/IMG_20200316_101135.jpg"}
+                 alt={"Motorická kostka"}
+            />
+            <p>Motorická kostka</p>
+          </a>
+        </Link>
+        <Link href={"gallery/customBeechTreadsForBalconyDoors"}>
+          <a className={` ${styles.galleryItem} ${styles.galleryItem14}`}>
+            <img className={styles.galleryImg}
+                 src={"/gallery/customBeechTreadsForBalconyDoors/IMG_20200607_161416.jpg"}
+                 alt={"Zakázka bukové nášlapy k balkónovým dveřím"}
+            />
+            <p>Zakázka bukové nášlapy k balkónovým dveřím</p>
+          </a>
+        </Link>
+        <Link href={"gallery/customChildrenSwing"}>
+          <a className={` ${styles.galleryItem} ${styles.galleryItem16}`}>
+            <img className={styles.galleryImg}
+                 src={"/gallery/customChildrenSwing/89767542_111197243832192_7907715157705359360_n.jpg"}
+                 alt={"Zakázka dětská houpačka"}
+            />
+            <p>Zakázka dětská houpačka</p>
+          </a>
+        </Link>
+        <Link href={"gallery/customChildrenKitchenette"}>
+          <a className={` ${styles.galleryItem} ${styles.galleryItem21}`}>
+            <img className={styles.galleryImg}
+                 src={"/gallery/customChildrenKitchenette/IMG_20190317_194525.jpg"}
+                 alt={"Zakázka dětská kuchyňka"}
+            />
+            <p>Zakázka dětská kuchyňka</p>
+          </a>
+        </Link>
+        <Link href={"gallery/customBed"}>
+          <a className={` ${styles.galleryItem} ${styles.galleryItem18}`}>
+            <img className={styles.galleryImg}
+                 src={"/gallery/customBed/IMG_20190317_130003.jpg"}
+                 alt={"Zakázka postel"}
+            />
+            <p>Zakázka postel</p>
+          </a>
+        </Link>
+        <Link href={"gallery/customChangingTable"}>
+          <a className={` ${styles.galleryItem} ${styles.galleryItem19}`}>
+            <img className={styles.galleryImg}
+                 src={"/gallery/customChangingTable/IMG_20190503_062455.jpg"}
+                 alt={"Zakázka přebalovací pult"}
+            />
+            <p>Zakázka přebalovací pult</p>
+          </a>
+        </Link>
+        <Link href={"gallery/customBuiltInCabinetForTv"}>
+          <a className={` ${styles.galleryItem} ${styles.galleryItem20}`}>
+            <img className={styles.galleryImg}
+                 src={"/gallery/customBuiltInCabinetForTv/IMG_20201024_142726.jpg"}
+                 alt={"Zakázka vestavěná skříň na Tv"}
+            />
+            <p>Zakázka vestavěná skříň na Tv</p>
+          </a>
+        </Link>
+        <Link href={"gallery/customRailings"}>
+          <a className={` ${styles.galleryItem} ${styles.galleryItem17}`}>
+            <img className={styles.galleryImg}
+                 src={"/gallery/customRailings/IMG_20190924_184730.jpg"}
+                 alt={"Zakázka zábradlí"}
+            />
+            <p>Zakázka zábradlí</p>
+          </a>
+        </Link>
 
       </div>
     </div>

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
+import React from "react";
 
 export default function Home() {
 
@@ -13,14 +14,17 @@ export default function Home() {
         </Head>
 
         <main className={styles.main}>
-          <h3>Vítejte na stránce</h3>
+          <h2>Vítejte na stránce</h2>
           <br />
           <br />
           <h1 className={styles.title}>Jardovo Truhlářství</h1>
           <br />
           <br />
           <h2>Výroba atypického nábytku na míru.</h2>
-
+          <video className={styles.video} width="320" height="240" loop controls >
+            <source src="/gallery/customMotoricCube/VID_20201213_175834.mp4" type="video/mp4"/>
+                Your browser does not support the video tag.
+          </video>
           <div className={styles.grid}>
             <a href="/aboutMe" className={`${styles.card} ${styles.radial} `}>
               <h3>O mně</h3>
@@ -34,33 +38,29 @@ export default function Home() {
                     <div className={styles.previews}>
                       <div className={styles.previewImage}>
                         <img
-                          alt={"1"}
-                          src="https://i.ytimg.com/vi/c7oV1T2j5mc/maxresdefault.jpg"
+                          alt={"Zakázka motorická kostka"}
+                          src={"/gallery/customMotoricCube/IMG_20201212_185548.jpg"}
                         />
                       </div>
                       <div className={styles.previewImage}>
                         <img
-                          alt={"13"}
-                          src="https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg"
-                        />
+                            src={"/gallery/oakSelfBearingStairs/IMG_20200908_172028.jpg"}
+                            alt={"Dubové samonosné schody"}/>
                       </div>
                       <div className={styles.previewImage}>
                         <img
-                          alt={"12"}
-                          src="https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg"
-                        />
+                            src={"/gallery/customChildrenBed/IMG_20210111_171400.jpg"}
+                            alt={"Zakázka detská postýlka"} />
                       </div>
                       <div className={styles.previewImage}>
                         <img
-                          alt={"14"}
-                          src="https://cdn.fstoppers.com/styles/large/s3/lead/2018/07/take_better_shots_with_your_drone_landscape_photos.jpg"
-                        />
+                            src={"/gallery/customWoodenGardenHouse/IMG_20200501_185231.jpg"}
+                            alt={"Zakázka zahradní dřevěný domeček"} />
                       </div>
                       <div className={styles.previewImage}>
                         <img
-                          alt={"15"}
-                          src="https://d31fr2pwly4c4s.cloudfront.net/8/6/c/1080632_0_landscape-photography_400.jpg"
-                        />
+                            src={"/gallery/customTableAndChairs/IMG_20200909_044309.jpg"}
+                            alt={"Zakázka stolek a židle"}  />
                       </div>
                     </div>
                   </div>
