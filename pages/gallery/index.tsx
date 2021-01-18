@@ -6,8 +6,9 @@ import {dataForGallery} from "../../components/config/dataForGallery";
 const GalleryOfPictures = ({  }) => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Jardovo Truhlářství</h1>
-      <br />
+        <a href={"/"}>
+            <h1 className={styles.title}>Jardovo Truhlářství</h1>
+        </a>      <br />
       <br />
       <div className={styles.gallery}>
         {dataForGallery.map(data => <Link href={data.href}>

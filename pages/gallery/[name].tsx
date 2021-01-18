@@ -49,7 +49,9 @@ const Name = ({ photos }) => {
   return (
     <>
       <div className={styles.container1}>
-        <h1 className={styles.title}>Jardovo Truhlářství</h1>
+        <a href={"/"}>
+          <h1 className={styles.title}>Jardovo Truhlářství</h1>
+        </a>
         <h2>{t[name as string]}</h2>
         <div className={styles.container}>
           <Gallery

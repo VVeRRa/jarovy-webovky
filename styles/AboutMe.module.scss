@@ -1,0 +1,40 @@
+.container1 {
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+
+  @media (min-width: 600px) {
+    padding: 3rem;
+    }
+  @media (min-width: 1000px) {
+    margin: auto;
+    width: 75vw;
+  }
+  @media (min-width: 1200px) {
+    width: 60vw;
+  }
+  h1 {
+    padding: 2rem 1rem 0;
+    margin: 2rem 0;
+  }
+  h2 {
+    margin: 4rem 0 2rem;
+  }
+}
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 3rem;
+
+  @media (min-width: 600px) {
+    font-size: 4rem;
+  }
+  &:hover {
+    text-shadow: brown 3px 3px 3px;
+  }
+}

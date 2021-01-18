@@ -18,6 +18,10 @@
 
   h1 {
     padding: 2rem 1rem 0;
+
+    &:hover {
+      text-shadow: brown 3px 3px 3px;
+    }
   }
 }
 .container {

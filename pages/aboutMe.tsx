@@ -1,11 +1,12 @@
 import React from "react";
-import styles from "../styles/Home.module.scss";
+import styles from "../styles/AboutMe.module.scss";
 
 const AboutMe = () => {
   return (
     <div className={styles.container1}>
-      <h1 className={styles.title}>Jardovo Truhlářství</h1>
-      <br />
+        <a href={"/"}>
+            <h1 className={styles.title}>Jardovo Truhlářství</h1>
+        </a>      <br />
       <br />
       <p>
         K truhlařině jsem se dostal jako slepý k houslím a také jednoduše. Začal
