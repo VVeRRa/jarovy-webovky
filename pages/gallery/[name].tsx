@@ -10,7 +10,7 @@ import { base64Img } from "../../public/gallery/base64Img";
 const t = {
   oakSelfBearingStairs: "Dubové samonosné schody",
   customChildrenBed: "Zakázka detská postýlka",
-  customChildrenChangingRoom: "Zakázka detská šatnička",
+  customChildrenChangingRoom: "Zakázka dětská šatnička",
   customWoodenGardenHouse: "Zakázka zahradní dřevěný domeček",
   customChildrenShelf: "Zakázka detská polička",
   customSpruceBed: "customBed masiv smrk",
